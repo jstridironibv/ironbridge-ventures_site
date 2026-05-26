@@ -119,8 +119,14 @@
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(46,15,56,0.6) 60%, rgba(0,0,0,0.95) 100%),
-        url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80') center/cover no-repeat;
+        linear-gradient(to bottom, rgba(0,0,0,0.40) 0%, rgba(46,15,56,0.45) 55%, rgba(0,0,0,0.80) 100%),
+        image-set(
+          url('hero-bridge.webp') type('image/webp'),
+          url('hero-bridge.jpg') type('image/jpeg')
+        ) center/cover no-repeat;
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,0.40) 0%, rgba(46,15,56,0.45) 55%, rgba(0,0,0,0.80) 100%),
+        url('hero-bridge.jpg') center/cover no-repeat;
     }
 
     /* animated diagonal accent lines */
@@ -350,7 +356,7 @@
       max-width: 1200px;
       margin: 56px auto 0;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 2px;
     }
 
@@ -513,8 +519,8 @@
       line-height: 1.6;
     }
 
-    /* ── FORGE BRIDGE ─────────────────────────────────────────── */
-    #forge {
+    /* ── IRONFIRE TECHNOLOGIES ────────────────────────────────── */
+    #ironfire {
       background: var(--black);
       border-top: 1px solid rgba(5,13,255,0.2);
     }
@@ -704,7 +710,7 @@
       <li><a href="#mission">Mission</a></li>
       <li><a href="#ventures">Ventures</a></li>
       <li><a href="#ironlimb">IronLimb</a></li>
-      <li><a href="#forge">Forge</a></li>
+      <li><a href="#ironfire">IronFire</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -764,7 +770,8 @@
     </div>
     <div class="ventures-grid">
 
-      <!-- Real Estate -->
+      <!-- IronPointe and IronPeake hidden pending venture activation -->
+      <!--
       <div class="venture-card re reveal">
         <p class="venture-category">Real Estate</p>
         <h3 class="venture-name">IronPointe</h3>
@@ -780,13 +787,14 @@
         <p class="venture-desc">Commercial real estate ventures focused on strategic acquisition, development, and management of income-producing properties.</p>
         <span class="venture-status status-dev">Under Development</span>
       </div>
+      -->
 
-      <!-- Retail -->
+      <!-- Non-Profit -->
       <div class="venture-card retail reveal">
-        <p class="venture-category">Retail</p>
+        <p class="venture-category">Non-Profit</p>
         <h3 class="venture-name">IronLimb</h3>
-        <p class="venture-sub">Athletics · Non-Profit</p>
-        <p class="venture-desc">Athletic apparel and community built in memory of a warrior. Proceeds fund phantom limb research and support amputee veterans.</p>
+        <p class="venture-sub">Foundation · Non-Profit</p>
+        <p class="venture-desc">A research and service foundation built in memory of a civilian amputee who lost his battle with opioid pain treatment for phantom limb syndrome. We fund better answers.</p>
         <a href="#ironlimb" class="venture-status status-memory" style="text-decoration:none;">In Memory · Learn More</a>
       </div>
 
@@ -807,13 +815,18 @@
         <span class="venture-status status-dev">Under Development</span>
       </div>
 
-      <!-- Forge -->
+      <!-- IronFire Technologies -->
       <div class="venture-card reveal" style="border-top-color: var(--blue);">
         <p class="venture-category" style="color:var(--blue);">Technology</p>
-        <h3 class="venture-name">Forge App</h3>
-        <p class="venture-sub">Platform · Fitness Tech</p>
-        <p class="venture-desc">An AI-powered fitness and wellness platform. Deeply integrated with IronLimb Athletics as a driver of impact, community, and brand distinction.</p>
-        <a href="#forge" class="venture-status" style="background:rgba(5,13,255,0.1);color:var(--blue);border:1px solid rgba(5,13,255,0.3);text-decoration:none;">In Development · Learn More</a>
+        <h3 class="venture-name">IronFire Technologies</h3>
+        <p class="venture-sub">Software · AI · Platform</p>
+        <p class="venture-desc">Purpose-driven software built to serve athletes, nonprofits, and communities. Building platforms where technology generates real, measurable impact.</p>
+        <div style="margin:16px 0 20px; padding:14px 16px; border:1px solid rgba(5,13,255,0.2); background:rgba(5,13,255,0.05);">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.6rem;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--blue);margin-bottom:6px;">Flagship Product</div>
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.06em;color:var(--white);margin-bottom:2px;">Enferno App</div>
+          <div style="font-size:0.72rem;color:var(--grey);letter-spacing:0.04em;">AI Fitness · Community · IronLimb Impact</div>
+        </div>
+        <a href="https://ironfiretech.com" class="venture-status" style="background:rgba(5,13,255,0.1);color:var(--blue);border:1px solid rgba(5,13,255,0.3);text-decoration:none;">In Development · ironfiretech.com</a>
       </div>
 
     </div>
@@ -826,14 +839,14 @@
     <div class="ironlimb-inner">
       <div class="ironlimb-quote reveal">
         <p class="section-label">In Memoriam</p>
-        <h2 class="section-title" style="margin-bottom:32px;">IronLimb <span class="dim">Athletics</span></h2>
+        <h2 class="section-title" style="margin-bottom:32px;">IronLimb <span class="dim">Foundation</span></h2>
         <blockquote class="ironlimb-quote">
-          <p>"He carried more than most will ever know — and he never put it down. This is his legacy."</p>
-          <cite>— IronBridge Holdings</cite>
+          <p>"He carried more than most will ever know — and he never put it down. This foundation is his legacy."</p>
+          <cite>— Jason Stridiron, Founder · US Navy Retired, Disabled Veteran</cite>
         </blockquote>
-        <p style="font-size:0.9rem; color:rgba(255,255,255,0.55); margin-top:28px; line-height:1.8;">IronLimb Athletics is a non-profit athletic clothing brand created in honor of a dear friend — an amputee who lived with phantom limb syndrome. More than a brand, it is a mission: to fund research into phantom limb pain and to provide tangible support for amputees, especially our veterans.</p>
+        <p style="font-size:0.9rem; color:rgba(255,255,255,0.55); margin-top:28px; line-height:1.8;">IronLimb Foundation was created in honor of a dear friend — a civilian amputee who lived with phantom limb syndrome and ultimately lost his battle with opioid pain medication used to manage it. More than a tribute, it is a mission: to fund non-opioid pain research, to build real support systems for amputees, and to fight for the answers that were not there when he needed them.</p>
         <div style="margin-top:32px;">
-          <a href="#contact" class="btn btn-primary">Get Involved</a>
+          <a href="#contact" class="btn btn-primary">Support the Foundation</a>
         </div>
       </div>
       <div class="ironlimb-pillars reveal">
@@ -853,17 +866,17 @@
           </div>
         </div>
         <div class="pillar">
-          <div class="pillar-icon">💪</div>
+          <div class="pillar-icon">💊</div>
           <div class="pillar-text">
-            <strong>Athletic Identity</strong>
-            <p>Gear built for those who push limits regardless of what limbs they have. Athletes first. Labels second.</p>
+            <strong>Non-Opioid Pain Research</strong>
+            <p>Funding alternatives to opioid pain management for phantom limb syndrome — because better options exist and people deserve them.</p>
           </div>
         </div>
         <div class="pillar">
           <div class="pillar-icon">📱</div>
           <div class="pillar-text">
-            <strong>Powered by Forge</strong>
-            <p>The Forge App serves as IronLimb's tech backbone — community, tracking, and impact in one platform.</p>
+            <strong>Powered by Enferno</strong>
+            <p>The Enferno App by IronFire Technologies serves as IronLimb's tech backbone — community, tracking, and impact in one platform.</p>
           </div>
         </div>
       </div>
@@ -872,8 +885,8 @@
 
   <div class="divider"></div>
 
-  <!-- FORGE BRIDGE -->
-  <section id="forge">
+  <!-- IRONFIRE TECHNOLOGIES -->
+  <section id="ironfire">
     <div class="forge-inner">
       <div class="forge-text reveal">
         <div class="forge-badge">
@@ -881,15 +894,15 @@
           <span>In Development</span>
         </div>
         <p class="section-label">Technology Venture</p>
-        <h2 class="section-title">Forge <span class="dim">App</span></h2>
-        <p>Forge is an AI-powered fitness and wellness platform being developed under the IronBridge umbrella. More than a training app, Forge is designed to serve as the <strong>digital engine of the IronLimb community</strong> — connecting athletes, tracking progress, and translating community engagement into real-world impact.</p>
-        <p>Every Forge subscription drives a contribution toward phantom limb research. Every workout logged is a tribute. <strong>Technology with purpose.</strong></p>
-        <a href="#contact" class="btn btn-ghost" style="margin-top:16px;">Stay Updated</a>
+        <h2 class="section-title">IronFire <span class="dim">Technologies</span></h2>
+        <p>IronFire Technologies is the software and platform arm of IronBridge Holdings — building purpose-driven applications at the intersection of technology, community, and human impact. <strong>Enferno</strong> is their flagship product: an AI-powered fitness platform serving as the digital backbone of IronLimb Foundation.</p>
+        <p>Every Enferno subscription drives a contribution toward phantom limb research. Every workout logged is a tribute. <strong>Technology with purpose.</strong></p>
+        <a href="https://ironfiretech.com" class="btn btn-ghost" style="margin-top:16px;">Visit ironfiretech.com</a>
       </div>
       <div class="forge-stat-block reveal">
         <div class="forge-stat">
           <div class="forge-stat-num">01</div>
-          <div class="forge-stat-label">Unified Platform</div>
+          <div class="forge-stat-label">Flagship: Enferno</div>
         </div>
         <div class="forge-stat">
           <div class="forge-stat-num">∞</div>
@@ -897,7 +910,7 @@
         </div>
         <div class="forge-stat">
           <div class="forge-stat-num">AI</div>
-          <div class="forge-stat-label">Powered Training</div>
+          <div class="forge-stat-label">Powered Platform</div>
         </div>
       </div>
     </div>

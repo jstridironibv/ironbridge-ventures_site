@@ -24,6 +24,11 @@
   [headers.values]
     Cache-Control = "public, max-age=604800"
 
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
 # Custom 404 page
 [[redirects]]
   from = "/*"
