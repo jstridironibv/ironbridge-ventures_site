@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IronBridge Holdings · Built on Iron</title>
+
+  <!-- SEO -->
+  <meta name="description" content="IronBridge Holdings is a multi-sector holding company built on IronWill, IronFaith, and IronService. Real estate, retail, technology, and purpose-driven nonprofits — forged on the same foundation." />
+  <meta name="theme-color" content="#5F1579" />
+  <link rel="canonical" href="https://ironbridge-ventures.com/" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/favicon.svg" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="IronBridge Holdings" />
+  <meta property="og:title" content="IronBridge Holdings · Built on Iron" />
+  <meta property="og:description" content="A multi-sector holding company grounded in IronWill, IronFaith, and IronService. We don't just build businesses — we build bridges." />
+  <meta property="og:url" content="https://ironbridge-ventures.com/" />
+  <meta property="og:image" content="https://ironbridge-ventures.com/og-image.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="IronBridge Holdings · Built on Iron" />
+  <meta name="twitter:description" content="A multi-sector holding company grounded in IronWill, IronFaith, and IronService." />
+  <meta name="twitter:image" content="https://ironbridge-ventures.com/og-image.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── Brand Tokens ─────────────────────────────────────────── */
+    :root {
+      --grey:          rgb(120,125,129);
+      --red:           rgb(221,21,0);
+      --black:         rgb(0,0,0);
+      --purple:        rgb(95,21,121);
+      --purple-mid:    rgb(131,81,168);
+      --purple-dark:   rgb(46,15,56);
+      --blue:          rgb(5,13,255);
+      --blue-dark:     rgb(26,44,84);
+      --teal:          rgb(77,124,147);
+      --white:         rgb(255,255,255);
+
+      --nav-h: 64px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Barlow', sans-serif;
+      font-weight: 300;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── Utility ──────────────────────────────────────────────── */
+    .sr-only { position: absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); }
+
+    /* ── NAV ──────────────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(95,21,121,0.4);
+    }
+
+    .nav-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: 0.12em;
+      color: var(--white);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--red); }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--grey);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--white); }
+
+    /* ── HERO ─────────────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,0.40) 0%, rgba(46,15,56,0.45) 55%, rgba(0,0,0,0.80) 100%),
+        image-set(
+          url('hero-bridge.webp') type('image/webp'),
+          url('hero-bridge.jpg') type('image/jpeg')
+        ) center/cover no-repeat;
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,0.40) 0%, rgba(46,15,56,0.45) 55%, rgba(0,0,0,0.80) 100%),
+        url('hero-bridge.jpg') center/cover no-repeat;
+    }
+
+    /* animated diagonal accent lines */
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        -55deg,
+        transparent,
+        transparent 60px,
+        rgba(95,21,121,0.04) 60px,
+        rgba(95,21,121,0.04) 61px
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 0 24px;
+    }
+
+    .hero-eyebrow {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.2s forwards;
+    }
+
+    .hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(4rem, 10vw, 9rem);
+      line-height: 0.92;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      opacity: 0;
+      animation: fadeUp 0.8s 0.4s forwards;
+    }
+    .hero-title .accent { color: var(--red); }
+
+    .hero-border-box {
+      display: inline-block;
+      border: 2px solid rgba(255,255,255,0.7);
+      padding: 8px 28px 12px;
+      margin-top: 8px;
+    }
+
+    .hero-tagline {
+      font-size: clamp(0.85rem, 1.5vw, 1.1rem);
+      font-weight: 300;
+      letter-spacing: 0.25em;
+      color: rgba(255,255,255,0.65);
+      text-transform: uppercase;
+      margin-top: 28px;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.6s forwards;
+    }
+    .hero-tagline em {
+      font-style: normal;
+      color: var(--purple-mid);
+    }
+
+    .hero-cta {
+      margin-top: 48px;
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.8s forwards;
+    }
+
+    .btn {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 13px 32px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s;
+      display: inline-block;
+    }
+    .btn-primary {
+      background: var(--red);
+      color: var(--white);
+    }
+    .btn-primary:hover {
+      background: var(--purple);
+      transform: translateY(-2px);
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.4);
+    }
+    .btn-ghost:hover {
+      border-color: var(--teal);
+      color: var(--teal);
+      transform: translateY(-2px);
+    }
+
+    /* scroll indicator */
+    .scroll-hint {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      opacity: 0.4;
+      animation: bounce 2s 1.5s infinite;
+    }
+    .scroll-hint span {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--grey);
+    }
+    .scroll-hint-arrow {
+      width: 1px;
+      height: 36px;
+      background: linear-gradient(to bottom, var(--grey), transparent);
+    }
+
+    /* ── DIVIDER ──────────────────────────────────────────────── */
+    .divider {
+      height: 3px;
+      background: linear-gradient(to right, var(--purple-dark), var(--red), var(--blue), var(--teal), var(--purple-dark));
+    }
+
+    /* ── SECTION COMMON ───────────────────────────────────────── */
+    section { padding: 100px 40px; }
+
+    .section-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      letter-spacing: 0.06em;
+      line-height: 1;
+      color: var(--white);
+      margin-bottom: 24px;
+    }
+
+    .section-title .dim { color: var(--grey); }
+
+    /* ── MISSION ──────────────────────────────────────────────── */
+    #mission {
+      background: var(--purple-dark);
+      position: relative;
+      overflow: hidden;
+    }
+    #mission::before {
+      content: 'IB';
+      position: absolute;
+      right: -40px;
+      top: -60px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28rem;
+      color: rgba(95,21,121,0.12);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .mission-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .mission-values {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding-top: 8px;
+    }
+    .value-pill {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.1em;
+      padding: 10px 20px;
+      border-left: 3px solid var(--red);
+      color: var(--white);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .mission-text p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 20px;
+    }
+    .mission-text p strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    /* ── VENTURES ─────────────────────────────────────────────── */
+    #ventures {
+      background: var(--black);
+    }
+
+    .ventures-grid {
+      max-width: 1200px;
+      margin: 56px auto 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+    }
+
+    .venture-card {
+      position: relative;
+      padding: 40px 32px;
+      background: rgb(12,12,12);
+      border-top: 2px solid transparent;
+      transition: border-color 0.3s, background 0.3s;
+      text-decoration: none;
+      display: block;
+      overflow: hidden;
+    }
+    .venture-card:hover { background: rgb(18,18,18); }
+    .venture-card.re  { border-top-color: var(--teal); }
+    .venture-card.re:hover::before  { opacity: 1; }
+    .venture-card.retail { border-top-color: var(--red); }
+    .venture-card.ecom   { border-top-color: var(--purple); }
+
+    .venture-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+    .venture-card.re::before    { background: linear-gradient(135deg, rgba(77,124,147,0.06), transparent 60%); }
+    .venture-card.retail::before { background: linear-gradient(135deg, rgba(221,21,0,0.06), transparent 60%); }
+    .venture-card.ecom::before  { background: linear-gradient(135deg, rgba(95,21,121,0.06), transparent 60%); }
+    .venture-card:hover::before { opacity: 1; }
+
+    .venture-category {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .venture-card.re   .venture-category { color: var(--teal); }
+    .venture-card.retail .venture-category { color: var(--red); }
+    .venture-card.ecom .venture-category { color: var(--purple-mid); }
+
+    .venture-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.8rem;
+      letter-spacing: 0.06em;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+
+    .venture-sub {
+      font-size: 0.78rem;
+      color: var(--grey);
+      letter-spacing: 0.05em;
+      margin-bottom: 20px;
+    }
+
+    .venture-desc {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .venture-status {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      display: inline-block;
+    }
+    .status-active  { background: rgba(77,124,147,0.15); color: var(--teal); border: 1px solid rgba(77,124,147,0.3); }
+    .status-dev     { background: rgba(221,21,0,0.10);   color: var(--red);  border: 1px solid rgba(221,21,0,0.25); }
+    .status-memory  { background: rgba(131,81,168,0.15); color: var(--purple-mid); border: 1px solid rgba(131,81,168,0.3); }
+
+    /* ── IRONLIMB FEATURE ─────────────────────────────────────── */
+    #ironlimb {
+      background: linear-gradient(160deg, var(--blue-dark) 0%, var(--purple-dark) 50%, var(--black) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    #ironlimb::after {
+      content: '';
+      position: absolute;
+      top: -200px; right: -200px;
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(131,81,168,0.15), transparent 70%);
+      pointer-events: none;
+    }
+
+    .ironlimb-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .ironlimb-quote {
+      position: relative;
+      padding-left: 28px;
+      border-left: 3px solid var(--purple-mid);
+    }
+    .ironlimb-quote p {
+      font-family: 'Barlow', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 300;
+      font-style: italic;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.6;
+    }
+    .ironlimb-quote cite {
+      display: block;
+      margin-top: 16px;
+      font-size: 0.75rem;
+      font-style: normal;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--purple-mid);
+    }
+
+    .ironlimb-pillars {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .pillar {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .pillar-icon {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+      background: var(--purple);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+    .pillar-text strong {
+      display: block;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .pillar-text p {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.6;
+    }
+
+    /* ── IRONFIRE TECHNOLOGIES ────────────────────────────────── */
+    #ironfire {
+      background: var(--black);
+      border-top: 1px solid rgba(5,13,255,0.2);
+    }
+    .forge-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .forge-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(5,13,255,0.1);
+      border: 1px solid rgba(5,13,255,0.3);
+      padding: 6px 14px;
+      margin-bottom: 24px;
+    }
+    .forge-badge span {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+    .forge-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--blue);
+      animation: pulse-blue 1.5s infinite;
+    }
+    .forge-text p {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 16px;
+      line-height: 1.8;
+    }
+    .forge-text p strong { color: var(--white); }
+    .forge-stat-block {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .forge-stat {
+      text-align: center;
+      padding: 20px;
+      border: 1px solid rgba(5,13,255,0.2);
+    }
+    .forge-stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.5rem;
+      letter-spacing: 0.05em;
+      color: var(--blue);
+      line-height: 1;
+    }
+    .forge-stat-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--grey);
+      margin-top: 4px;
+    }
+
+    /* ── CONTACT ──────────────────────────────────────────────── */
+    #contact {
+      background: var(--purple-dark);
+      text-align: center;
+    }
+    #contact .section-title { margin-bottom: 12px; }
+    #contact p {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 40px;
+    }
+    .contact-email {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.8rem;
+      letter-spacing: 0.1em;
+      color: var(--white);
+      text-decoration: none;
+      border-bottom: 2px solid var(--red);
+      padding-bottom: 4px;
+      transition: color 0.2s;
+    }
+    .contact-email:hover { color: var(--teal); }
+
+    /* ── FOOTER ───────────────────────────────────────────────── */
+    footer {
+      background: var(--black);
+      border-top: 1px solid rgba(120,125,129,0.15);
+      padding: 48px 40px 32px;
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .footer-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.1em;
+      color: var(--white);
+    }
+    .footer-logo span { color: var(--red); }
+
+    .footer-motto {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--grey);
+    }
+    .footer-motto em { font-style: normal; color: var(--purple-mid); }
+
+    .footer-copy {
+      font-size: 0.72rem;
+      color: rgba(120,125,129,0.5);
+      letter-spacing: 0.05em;
+    }
+
+    /* ── ANIMATIONS ───────────────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50%       { transform: translateX(-50%) translateY(8px); }
+    }
+    @keyframes pulse-blue {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.3; }
+    }
+
+    /* fade-in on scroll */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ── RESPONSIVE ───────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      nav { padding: 0 20px; }
+      .nav-links { gap: 20px; }
+      section { padding: 72px 24px; }
+
+      .mission-inner,
+      .ironlimb-inner,
+      .forge-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .ventures-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .hero-border-box { padding: 6px 16px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#home" class="nav-logo">Iron<span>Bridge</span></a>
+    <ul class="nav-links">
+      <li><a href="#mission">Mission</a></li>
+      <li><a href="#ventures">Ventures</a></li>
+      <li><a href="#ironlimb">IronLimb</a></li>
+      <li><a href="#ironfire">IronFire</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Ironbridge-Ventures.com</p>
+      <h1 class="hero-title">
+        <div class="hero-border-box">
+          IronBridge<br><span class="accent">Holdings</span>
+        </div>
+      </h1>
+      <p class="hero-tagline">
+        <em>IronWill</em> &nbsp;·&nbsp; <em>IronFaith</em> &nbsp;·&nbsp; <em>IronService</em>
+      </p>
+      <div class="hero-cta">
+        <a href="#ventures" class="btn btn-primary">Our Ventures</a>
+        <a href="#mission" class="btn btn-ghost">Our Mission</a>
+      </div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-hint-arrow"></div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- MISSION -->
+  <section id="mission">
+    <div class="mission-inner">
+      <div class="mission-values reveal">
+        <p class="section-label">Core Values</p>
+        <div class="value-pill">IronWill</div>
+        <div class="value-pill">IronFaith</div>
+        <div class="value-pill">IronService</div>
+      </div>
+      <div class="mission-text reveal">
+        <p class="section-label">Who We Are</p>
+        <h2 class="section-title">Built on <span class="dim">Iron</span></h2>
+        <p>IronBridge Holdings is a multi-sector holding company grounded in the belief that business can be a force for genuine good. We build ventures that create real value — in communities, in commerce, and in the lives of the people we serve.</p>
+        <p>From real estate and retail to technology and purpose-driven nonprofits, every Iron entity is forged on the same foundation: <strong>unwavering will, deep faith, and selfless service.</strong></p>
+        <p>We don't just build businesses. We build bridges.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- VENTURES -->
+  <section id="ventures">
+    <div style="max-width:1200px; margin:0 auto;">
+      <p class="section-label reveal">Portfolio</p>
+      <h2 class="section-title reveal">Our <span class="dim">Ventures</span></h2>
+    </div>
+    <div class="ventures-grid">
+
+      <!-- IronPointe and IronPeake hidden pending venture activation -->
+      <!--
+      <div class="venture-card re reveal">
+        <p class="venture-category">Real Estate</p>
+        <h3 class="venture-name">IronPointe</h3>
+        <p class="venture-sub">Properties · Residential</p>
+        <p class="venture-desc">Multi-family residential real estate. Developing quality housing solutions that serve communities and build long-term generational wealth.</p>
+        <span class="venture-status status-dev">Under Development</span>
+      </div>
+
+      <div class="venture-card re reveal" style="border-top-color: var(--blue-dark);">
+        <p class="venture-category" style="color:var(--teal);">Real Estate</p>
+        <h3 class="venture-name">IronPeake</h3>
+        <p class="venture-sub">Properties · Commercial</p>
+        <p class="venture-desc">Commercial real estate ventures focused on strategic acquisition, development, and management of income-producing properties.</p>
+        <span class="venture-status status-dev">Under Development</span>
+      </div>
+      -->
+
+      <!-- Non-Profit -->
+      <div class="venture-card retail reveal">
+        <p class="venture-category">Non-Profit</p>
+        <h3 class="venture-name">IronLimb</h3>
+        <p class="venture-sub">Foundation · Non-Profit</p>
+        <p class="venture-desc">A research and service foundation built in memory of a civilian amputee who lost his battle with opioid pain treatment for phantom limb syndrome. We fund better answers.</p>
+        <a href="#ironlimb" class="venture-status status-memory" style="text-decoration:none;">In Memory · Learn More</a>
+      </div>
+
+      <div class="venture-card retail reveal">
+        <p class="venture-category">Retail</p>
+        <h3 class="venture-name">IronCrest</h3>
+        <p class="venture-sub">Apparel</p>
+        <p class="venture-desc">Premium lifestyle apparel brand rooted in the IronBridge identity — built for those who carry themselves with iron in their spine.</p>
+        <span class="venture-status status-dev">Under Development</span>
+      </div>
+
+      <!-- E-Commerce -->
+      <div class="venture-card ecom reveal">
+        <p class="venture-category">E-Commerce</p>
+        <h3 class="venture-name">IronFind</h3>
+        <p class="venture-sub">Outlet</p>
+        <p class="venture-desc">Curated e-commerce outlet connecting consumers with quality products across the IronBridge family and trusted partner brands.</p>
+        <span class="venture-status status-dev">Under Development</span>
+      </div>
+
+      <!-- IronFire Technologies -->
+      <div class="venture-card reveal" style="border-top-color: var(--blue);">
+        <p class="venture-category" style="color:var(--blue);">Technology</p>
+        <h3 class="venture-name">IronFire Technologies</h3>
+        <p class="venture-sub">Software · AI · Platform</p>
+        <p class="venture-desc">Purpose-driven software built to serve athletes, nonprofits, and communities. Building platforms where technology generates real, measurable impact.</p>
+        <div style="margin:16px 0 20px; padding:14px 16px; border:1px solid rgba(5,13,255,0.2); background:rgba(5,13,255,0.05);">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.6rem;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--blue);margin-bottom:6px;">Flagship Product</div>
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.06em;color:var(--white);margin-bottom:2px;">Enferno App</div>
+          <div style="font-size:0.72rem;color:var(--grey);letter-spacing:0.04em;">AI Fitness · Community · IronLimb Impact</div>
+        </div>
+        <a href="https://ironfiretech.com" class="venture-status" style="background:rgba(5,13,255,0.1);color:var(--blue);border:1px solid rgba(5,13,255,0.3);text-decoration:none;">In Development · ironfiretech.com</a>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- IRONLIMB FEATURE -->
+  <section id="ironlimb">
+    <div class="ironlimb-inner">
+      <div class="ironlimb-quote reveal">
+        <p class="section-label">In Memoriam</p>
+        <h2 class="section-title" style="margin-bottom:32px;">IronLimb <span class="dim">Foundation</span></h2>
+        <blockquote class="ironlimb-quote">
+          <p>"He carried more than most will ever know — and he never put it down. This foundation is his legacy."</p>
+          <cite>— Jason Stridiron, Founder · US Navy Retired, Disabled Veteran</cite>
+        </blockquote>
+        <p style="font-size:0.9rem; color:rgba(255,255,255,0.55); margin-top:28px; line-height:1.8;">IronLimb Foundation was created in honor of a dear friend — a civilian amputee who lived with phantom limb syndrome and ultimately lost his battle with opioid pain medication used to manage it. More than a tribute, it is a mission: to fund non-opioid pain research, to build real support systems for amputees, and to fight for the answers that were not there when he needed them.</p>
+        <div style="margin-top:32px;">
+          <a href="#contact" class="btn btn-primary">Support the Foundation</a>
+        </div>
+      </div>
+      <div class="ironlimb-pillars reveal">
+        <p class="section-label">Our Pillars</p>
+        <div class="pillar">
+          <div class="pillar-icon">🔬</div>
+          <div class="pillar-text">
+            <strong>Phantom Limb Research</strong>
+            <p>Proceeds directly fund research into phantom limb syndrome — a painful, under-resourced condition affecting millions of amputees worldwide.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">🎖</div>
+          <div class="pillar-text">
+            <strong>Veteran Support</strong>
+            <p>Programs dedicated to helping amputee veterans access resources, community, and adaptive athletic opportunities.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">💊</div>
+          <div class="pillar-text">
+            <strong>Non-Opioid Pain Research</strong>
+            <p>Funding alternatives to opioid pain management for phantom limb syndrome — because better options exist and people deserve them.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">📱</div>
+          <div class="pillar-text">
+            <strong>Powered by Enferno</strong>
+            <p>The Enferno App by IronFire Technologies serves as IronLimb's tech backbone — community, tracking, and impact in one platform.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- IRONFIRE TECHNOLOGIES -->
+  <section id="ironfire">
+    <div class="forge-inner">
+      <div class="forge-text reveal">
+        <div class="forge-badge">
+          <div class="forge-dot"></div>
+          <span>In Development</span>
+        </div>
+        <p class="section-label">Technology Venture</p>
+        <h2 class="section-title">IronFire <span class="dim">Technologies</span></h2>
+        <p>IronFire Technologies is the software and platform arm of IronBridge Holdings — building purpose-driven applications at the intersection of technology, community, and human impact. <strong>Enferno</strong> is their flagship product: an AI-powered fitness platform serving as the digital backbone of IronLimb Foundation.</p>
+        <p>Every Enferno subscription drives a contribution toward phantom limb research. Every workout logged is a tribute. <strong>Technology with purpose.</strong></p>
+        <a href="https://ironfiretech.com" class="btn btn-ghost" style="margin-top:16px;">Visit ironfiretech.com</a>
+      </div>
+      <div class="forge-stat-block reveal">
+        <div class="forge-stat">
+          <div class="forge-stat-num">01</div>
+          <div class="forge-stat-label">Flagship: Enferno</div>
+        </div>
+        <div class="forge-stat">
+          <div class="forge-stat-num">∞</div>
+          <div class="forge-stat-label">Community Impact</div>
+        </div>
+        <div class="forge-stat">
+          <div class="forge-stat-num">AI</div>
+          <div class="forge-stat-label">Powered Platform</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <p class="section-label">Reach Out</p>
+    <h2 class="section-title">Let's Build <span class="dim">Together</span></h2>
+    <p>Partnerships, inquiries, investors, and community — all welcome.</p>
+    <a href="mailto:contact@ironbridge-ventures.com" class="contact-email">contact@ironbridge-ventures.com</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Iron<span>Bridge</span> Holdings</div>
+      <div class="footer-motto"><em>IronWill</em> · <em>IronFaith</em> · <em>IronService</em></div>
+      <div class="footer-copy">© 2026 IronBridge Holdings LLC · All rights reserved</div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => obs.observe(el));
+
+    // Nav scroll effect
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      nav.style.borderBottomColor = window.scrollY > 60
+        ? 'rgba(221,21,0,0.3)'
+        : 'rgba(95,21,121,0.4)';
+    });
+  </script>
+
+</body>
+</html>

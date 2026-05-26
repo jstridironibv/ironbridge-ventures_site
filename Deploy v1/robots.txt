@@ -1,0 +1,9 @@
+# IronBridge Holdings — Soft Launch
+# Blocking all crawlers until public launch.
+# When ready to go public: change "Disallow: /" to "Disallow:" (empty value)
+# and uncomment the Sitemap line below.
+
+User-agent: *
+Disallow: /
+
+# Sitemap: https://ironbridge-ventures.com/sitemap.xml

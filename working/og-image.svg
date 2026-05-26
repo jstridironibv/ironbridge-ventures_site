@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#000000"/>
+      <stop offset="55%" stop-color="#2E0F38"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#DD1500"/>
+      <stop offset="100%" stop-color="#5F1579"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Subtle vertical lines (architectural feel) -->
+  <g opacity="0.08" stroke="#835168" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="630"/>
+    <line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="900" y1="0" x2="900" y2="630"/>
+    <line x1="1100" y1="0" x2="1100" y2="630"/>
+  </g>
+
+  <!-- Top eyebrow -->
+  <text x="100" y="130" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="600" letter-spacing="6" fill="#DD1500">IRONBRIDGE-VENTURES.COM</text>
+
+  <!-- Bridge mark -->
+  <g transform="translate(100, 175)">
+    <path d="M 0 60 Q 60 0 120 60" stroke="#5F1579" stroke-width="6" fill="none" stroke-linecap="square"/>
+    <line x1="-4" y1="68" x2="124" y2="68" stroke="#DD1500" stroke-width="5"/>
+    <line x1="30" y1="68" x2="30" y2="40" stroke="#835168" stroke-width="3"/>
+    <line x1="60" y1="68" x2="60" y2="22" stroke="#835168" stroke-width="3"/>
+    <line x1="90" y1="68" x2="90" y2="40" stroke="#835168" stroke-width="3"/>
+  </g>
+
+  <!-- Main title -->
+  <text x="100" y="380" font-family="Impact, 'Bebas Neue', Helvetica, sans-serif" font-size="120" font-weight="400" letter-spacing="2" fill="#FFFFFF">IronBridge</text>
+  <text x="100" y="480" font-family="Impact, 'Bebas Neue', Helvetica, sans-serif" font-size="120" font-weight="400" letter-spacing="2" fill="url(#accent)">Holdings</text>
+
+  <!-- Tagline -->
+  <text x="100" y="555" font-family="Helvetica, Arial, sans-serif" font-style="italic" font-size="22" fill="#FFFFFF" opacity="0.7">IronWill  ·  IronFaith  ·  IronService</text>
+
+  <!-- Right edge accent -->
+  <rect x="1180" y="0" width="20" height="630" fill="#5F1579"/>
+  <rect x="1180" y="0" width="20" height="180" fill="#DD1500"/>
+</svg>

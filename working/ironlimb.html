@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IronLimb Foundation · A Warrior's Legacy</title>
+
+  <!-- SEO -->
+  <meta name="description" content="IronLimb Foundation is a non-profit foundation founded by Jason Stridiron, US Navy Retired and Disabled Veteran, in memory of a civilian amputee who lost his battle with opioid pain medication for phantom limb syndrome. We fund non-opioid pain research and support amputee veterans." />
+  <meta name="theme-color" content="#2E0F38" />
+  <link rel="canonical" href="https://ironbridge-ventures.com/ironlimb.html" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/favicon.svg" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="IronBridge Holdings" />
+  <meta property="og:title" content="IronLimb Foundation · A Warrior's Legacy" />
+  <meta property="og:description" content="Founded in memory of a civilian amputee who suffered from phantom limb syndrome. A non-profit foundation funding non-opioid pain research and supporting amputee veterans." />
+  <meta property="og:url" content="https://ironbridge-ventures.com/ironlimb.html" />
+  <meta property="og:image" content="https://ironbridge-ventures.com/og-image.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="IronLimb Foundation · A Warrior's Legacy" />
+  <meta name="twitter:description" content="A non-profit foundation funding phantom limb and non-opioid pain research, and supporting amputee veterans." />
+  <meta name="twitter:image" content="https://ironbridge-ventures.com/og-image.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Barlow+Condensed:wght@300;400;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --grey:        rgb(120,125,129);
+      --red:         rgb(221,21,0);
+      --black:       rgb(0,0,0);
+      --purple:      rgb(95,21,121);
+      --purple-mid:  rgb(131,81,168);
+      --purple-dark: rgb(46,15,56);
+      --blue:        rgb(5,13,255);
+      --blue-dark:   rgb(26,44,84);
+      --teal:        rgb(77,124,147);
+      --white:       rgb(255,255,255);
+      --nav-h: 64px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Barlow', sans-serif;
+      font-weight: 300;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      background: rgba(0,0,0,0.9);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(131,81,168,0.3);
+    }
+    .nav-back {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--grey);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--white); }
+    .nav-back-arrow { font-size: 1rem; }
+    .nav-brand {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.15em;
+      color: var(--white);
+    }
+    .nav-brand span { color: var(--purple-mid); }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--grey);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--white); }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 640px;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 80px;
+      overflow: hidden;
+    }
+
+    /* Textured dark gradient — somber, dignified */
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(170deg, rgba(46,15,56,0.9) 0%, rgba(26,44,84,0.7) 40%, rgba(0,0,0,0.97) 100%);
+    }
+
+    /* SVG grain overlay for texture */
+    .hero-grain {
+      position: absolute;
+      inset: 0;
+      opacity: 0.06;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 200px;
+    }
+
+    /* vertical light shaft */
+    .hero-light {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 1px;
+      height: 45%;
+      background: linear-gradient(to bottom, rgba(131,81,168,0.6), transparent);
+      transform: translateX(-50%);
+    }
+
+    /* large faded background word */
+    .hero-ghost-text {
+      position: absolute;
+      bottom: -40px;
+      left: -20px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(10rem, 22vw, 22rem);
+      line-height: 1;
+      color: rgba(95,21,121,0.07);
+      pointer-events: none;
+      user-select: none;
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 60px;
+      max-width: 900px;
+    }
+
+    .hero-memorial-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 28px;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.2s forwards;
+    }
+    .memorial-line {
+      width: 40px;
+      height: 1px;
+      background: var(--purple-mid);
+    }
+    .memorial-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--purple-mid);
+    }
+
+    .hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(4.5rem, 11vw, 10rem);
+      line-height: 0.88;
+      letter-spacing: 0.03em;
+      color: var(--white);
+      opacity: 0;
+      animation: fadeUp 0.9s 0.35s forwards;
+    }
+    .hero-title .sub {
+      font-family: 'DM Serif Display', serif;
+      font-style: italic;
+      font-size: clamp(1.8rem, 4vw, 3.8rem);
+      color: var(--purple-mid);
+      display: block;
+      letter-spacing: 0.01em;
+      line-height: 1.2;
+      margin-top: 4px;
+    }
+
+    .hero-desc {
+      max-width: 520px;
+      font-size: 1rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.85;
+      margin-top: 28px;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.55s forwards;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.7s forwards;
+    }
+
+    .btn {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 14px 34px;
+      display: inline-block;
+      transition: all 0.25s;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary { background: var(--purple); color: var(--white); }
+    .btn-primary:hover { background: var(--red); transform: translateY(-2px); }
+    .btn-ghost {
+      background: transparent;
+      color: var(--white);
+      border: 1px solid rgba(131,81,168,0.5);
+    }
+    .btn-ghost:hover { border-color: var(--white); transform: translateY(-2px); }
+
+    /* candle / flame motif */
+    .flame-row {
+      position: absolute;
+      top: var(--nav-h);
+      right: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      opacity: 0;
+      animation: fadeIn 1.5s 1s forwards;
+    }
+    .flame {
+      width: 16px;
+      height: 28px;
+      background: radial-gradient(ellipse at 50% 80%, var(--red) 0%, rgba(221,21,0,0.3) 60%, transparent 100%);
+      border-radius: 50% 50% 20% 20%;
+      animation: flicker 2.5s ease-in-out infinite alternate;
+    }
+    .candle-body {
+      width: 10px;
+      height: 80px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.9), rgba(200,200,200,0.5));
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      height: 3px;
+      background: linear-gradient(to right, var(--purple-dark), var(--red), var(--purple-mid), var(--purple-dark));
+    }
+
+    /* ── SECTIONS ── */
+    section { padding: 100px 60px; }
+
+    .section-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.4rem, 5vw, 4.2rem);
+      letter-spacing: 0.05em;
+      line-height: 1;
+      color: var(--white);
+      margin-bottom: 24px;
+    }
+    .section-title .dim { color: var(--grey); }
+    .section-title .accent { color: var(--purple-mid); }
+
+    /* ── STORY ── */
+    #story {
+      background: var(--black);
+      position: relative;
+    }
+    .story-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .story-left {}
+    .story-quote {
+      margin-top: 40px;
+      padding: 28px 32px;
+      background: rgba(46,15,56,0.5);
+      border-left: 3px solid var(--purple-mid);
+      position: relative;
+    }
+    .story-quote::before {
+      content: '\201C';
+      position: absolute;
+      top: -20px; left: 20px;
+      font-family: 'DM Serif Display', serif;
+      font-size: 5rem;
+      color: var(--purple);
+      line-height: 1;
+    }
+    .story-quote p {
+      font-family: 'DM Serif Display', serif;
+      font-style: italic;
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.75;
+    }
+    .story-quote cite {
+      display: block;
+      margin-top: 14px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-style: normal;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--purple-mid);
+    }
+    .story-right p {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.62);
+      line-height: 1.9;
+      margin-bottom: 20px;
+    }
+    .story-right p strong { color: var(--white); font-weight: 600; }
+    .story-right p em { color: var(--purple-mid); font-style: italic; }
+
+    /* phantom limb stat callout */
+    .stat-callout {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+    }
+    .stat-box {
+      padding: 24px 20px;
+      background: rgb(10,10,10);
+      border-bottom: 2px solid transparent;
+    }
+    .stat-box.p1 { border-color: var(--red); }
+    .stat-box.p2 { border-color: var(--purple-mid); }
+    .stat-box.p3 { border-color: var(--teal); }
+    .stat-box.p4 { border-color: var(--blue-dark); }
+    .stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.6rem;
+      letter-spacing: 0.04em;
+      line-height: 1;
+      color: var(--white);
+    }
+    .stat-desc {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--grey);
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    /* ── MISSION PILLARS ── */
+    #mission {
+      background: var(--purple-dark);
+      position: relative;
+      overflow: hidden;
+    }
+    #mission::after {
+      content: '';
+      position: absolute;
+      bottom: -200px; right: -200px;
+      width: 700px; height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(131,81,168,0.1), transparent 70%);
+      pointer-events: none;
+    }
+    .mission-inner { max-width: 1100px; margin: 0 auto; }
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+      margin-top: 56px;
+    }
+    .pillar-card {
+      padding: 44px 36px;
+      background: rgba(0,0,0,0.35);
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s;
+    }
+    .pillar-card:hover { background: rgba(0,0,0,0.5); }
+    .pillar-card::before {
+      content: attr(data-num);
+      position: absolute;
+      right: -10px; top: -20px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 7rem;
+      color: rgba(131,81,168,0.07);
+      line-height: 1;
+      pointer-events: none;
+    }
+    .pillar-icon-lg {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+    .pillar-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: 0.08em;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .pillar-body {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.8;
+    }
+    .pillar-body strong { color: rgba(255,255,255,0.85); }
+
+    /* ── ENFERNO INTEGRATION ── */
+    #enferno {
+      background: linear-gradient(135deg, var(--black) 0%, var(--blue-dark) 60%, var(--purple-dark) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    #forge-bridge::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 80px,
+        rgba(5,13,255,0.03) 80px,
+        rgba(5,13,255,0.03) 81px
+      );
+    }
+    .forge-bridge-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .forge-feature-list {
+      margin-top: 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .forge-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .forge-feature:last-child { border-bottom: none; }
+    .ff-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.1em;
+      color: var(--blue);
+      min-width: 28px;
+      padding-top: 2px;
+    }
+    .ff-content strong {
+      display: block;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .ff-content p {
+      font-size: 0.83rem;
+      color: rgba(255,255,255,0.48);
+      line-height: 1.7;
+    }
+    .forge-visual {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .forge-screen {
+      background: rgba(0,0,0,0.6);
+      border: 1px solid rgba(5,13,255,0.25);
+      border-radius: 2px;
+      padding: 20px 18px;
+      position: relative;
+    }
+    .forge-screen-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 12px;
+    }
+    .forge-bar {
+      height: 6px;
+      border-radius: 1px;
+      margin-bottom: 8px;
+      background: rgba(255,255,255,0.05);
+      overflow: hidden;
+      position: relative;
+    }
+    .forge-bar-fill {
+      height: 100%;
+      background: linear-gradient(to right, var(--purple), var(--blue));
+      border-radius: 1px;
+    }
+    .forge-bar-label {
+      display: flex;
+      justify-content: space-between;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      color: var(--grey);
+      margin-bottom: 10px;
+    }
+
+    /* ── INVOLVEMENT ── */
+    #get-involved {
+      background: var(--black);
+      border-top: 1px solid rgba(131,81,168,0.15);
+    }
+    .involvement-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .involvement-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 56px;
+    }
+    .involvement-card {
+      padding: 36px 28px;
+      background: rgb(10,10,10);
+      border-top: 2px solid var(--purple-mid);
+      transition: background 0.3s;
+    }
+    .involvement-card:hover { background: rgb(16,16,16); }
+    .inv-icon { font-size: 1.8rem; margin-bottom: 16px; display: block; }
+    .inv-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.08em;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .inv-body {
+      font-size: 0.83rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.75;
+      margin-bottom: 20px;
+    }
+    .inv-link {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--purple-mid);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(131,81,168,0.3);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .inv-link:hover { color: var(--white); border-color: var(--white); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--purple-dark);
+      padding: 48px 60px 32px;
+      border-top: 3px solid var(--purple);
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .footer-left {}
+    .footer-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.1em;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .footer-logo span { color: var(--purple-mid); }
+    .footer-sub {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+    }
+    .footer-nav {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+    .footer-nav a {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-nav a:hover { color: var(--white); }
+    .footer-copy {
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.25);
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    @keyframes flicker {
+      0%   { transform: scaleX(1)   scaleY(1)   rotate(-1deg); opacity: 0.9; }
+      33%  { transform: scaleX(0.9) scaleY(1.1) rotate(1deg);  opacity: 1; }
+      66%  { transform: scaleX(1.1) scaleY(0.95) rotate(-2deg); opacity: 0.85; }
+      100% { transform: scaleX(1)   scaleY(1.05) rotate(0deg);  opacity: 0.95; }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 0 20px; }
+      section { padding: 72px 24px; }
+      .hero-content { padding: 0 24px; }
+      .story-inner, .forge-bridge-inner { grid-template-columns: 1fr; gap: 48px; }
+      .pillars-grid, .involvement-grid { grid-template-columns: 1fr; }
+      .stat-callout { grid-template-columns: 1fr 1fr; }
+      footer { padding: 40px 24px 28px; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-nav { justify-content: center; }
+      .flame-row { display: none; }
+    }
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .stat-callout { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-back">
+      <span class="nav-back-arrow">←</span> IronBridge Holdings
+    </a>
+    <div class="nav-brand">Iron<span>Limb</span> Foundation</div>
+    <ul class="nav-links">
+      <li><a href="#story">Story</a></li>
+      <li><a href="#mission">Mission</a></li>
+      <li><a href="#enferno">Enferno</a></li>
+      <li><a href="#get-involved">Get Involved</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-grain"></div>
+    <div class="hero-light"></div>
+    <div class="hero-ghost-text" aria-hidden="true">IRON</div>
+
+    <!-- candle motif top-right -->
+    <div class="flame-row" aria-hidden="true">
+      <div class="flame"></div>
+      <div class="candle-body"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-memorial-tag">
+        <div class="memorial-line"></div>
+        <span class="memorial-label">In Memoriam · Non-Profit Foundation</span>
+      </div>
+      <h1 class="hero-title">
+        IronLimb
+        <span class="sub">Foundation</span>
+      </h1>
+      <p class="hero-desc">
+        Born from love, loss, and an unbreakable will. IronLimb Foundation exists to honor a brother who never quit — and to carry his fight forward through research, advocacy, and the relentless pursuit of better answers for those living in pain.
+      </p>
+      <div class="hero-actions">
+        <a href="#get-involved" class="btn btn-primary">Support the Mission</a>
+        <a href="#story" class="btn btn-ghost">His Story</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- STORY -->
+  <section id="story">
+    <div class="story-inner">
+      <div class="story-left reveal">
+        <p class="section-label">The Foundation</p>
+        <h2 class="section-title">A Warrior's <span class="accent">Legacy</span></h2>
+        <p style="font-size:0.95rem; color:rgba(255,255,255,0.58); line-height:1.9; margin-bottom:20px;">
+          IronLimb Foundation was founded by <strong style="color:var(--white);">Jason Stridiron</strong>, US Navy Retired and Disabled Veteran, in memory of a dear friend — a civilian amputee who carried more than most will ever understand. He lived daily with phantom limb syndrome: the relentless, invisible pain of a limb that is no longer there. He faced it with <strong style="color:var(--white);">iron will.</strong>
+        </p>
+        <p style="font-size:0.95rem; color:rgba(255,255,255,0.58); line-height:1.9; margin-bottom:20px;">
+          He was not a soldier. He was a brother. And like too many amputees, he turned to opioid pain medication because there was nothing better on offer. The medication became its own battle — one he ultimately did not win. His loss is not a footnote. It is <em>the reason IronLimb exists.</em>
+        </p>
+        <p style="font-size:0.95rem; color:rgba(255,255,255,0.58); line-height:1.9;">
+          Phantom limb syndrome is real, debilitating, and drastically underfunded. The inadequacy of non-opioid pain treatment options is not an inconvenience — it is costing lives. Every dollar raised, every partnership forged, every program funded carries his name forward.
+        </p>
+
+        <div class="story-quote">
+          <p>"He carried more than most will ever know — and he never put it down. This foundation is his."</p>
+          <cite>— Jason Stridiron, Founder · IronLimb Foundation</cite>
+        </div>
+      </div>
+
+      <div class="story-right reveal reveal-delay-2">
+        <p class="section-label">The Problem We Fight</p>
+        <h3 class="section-title" style="font-size:2rem;">Phantom Limb <span class="dim">Syndrome</span></h3>
+        <p>Phantom limb syndrome affects the overwhelming majority of amputees — a condition where the nervous system continues to send pain signals from a limb that no longer exists. It is chronic, debilitating, and <strong>drastically underfunded.</strong></p>
+        <p>Veterans account for a significant and growing portion of the amputee population. Many face this condition without adequate support, research-backed treatment options, or community. <em>That changes now.</em></p>
+
+        <div class="stat-callout">
+          <div class="stat-box p1">
+            <div class="stat-num">80%</div>
+            <div class="stat-desc">of amputees experience phantom limb pain</div>
+          </div>
+          <div class="stat-box p2">
+            <div class="stat-num">2M+</div>
+            <div class="stat-desc">Americans living with limb loss today</div>
+          </div>
+          <div class="stat-box p3">
+            <div class="stat-num">185K</div>
+            <div class="stat-desc">new amputations performed each year in the U.S.</div>
+          </div>
+          <div class="stat-box p4">
+            <div class="stat-num">↑</div>
+            <div class="stat-desc">veteran amputee rates rising — support lagging</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- MISSION PILLARS -->
+  <section id="mission">
+    <div class="mission-inner">
+      <p class="section-label reveal">What We Do</p>
+      <h2 class="section-title reveal">Four Pillars of <span class="accent">Impact</span></h2>
+
+      <div class="pillars-grid">
+        <div class="pillar-card reveal" data-num="01">
+          <span class="pillar-icon-lg">🔬</span>
+          <h3 class="pillar-title">Research Funding</h3>
+          <p class="pillar-body">Donations and program revenues directly fund <strong>phantom limb syndrome research</strong>. We partner with institutions working on neuroscience, mirror therapy, VR-based treatments, and prosthetic nerve integration. The science must catch up. We help fund the gap.</p>
+        </div>
+
+        <div class="pillar-card reveal reveal-delay-1" data-num="02">
+          <span class="pillar-icon-lg">🎖️</span>
+          <h3 class="pillar-title">Veteran Support</h3>
+          <p class="pillar-body">Amputee veterans deserve more than a thank you. IronLimb funds <strong>adaptive athletics programs, prosthetic access initiatives, and peer support networks</strong> specifically for veterans navigating life after limb loss. Service doesn't end when the uniform comes off.</p>
+        </div>
+
+        <div class="pillar-card reveal reveal-delay-2" data-num="03">
+          <span class="pillar-icon-lg">💊</span>
+          <h3 class="pillar-title">Non-Opioid Pain Research</h3>
+          <p class="pillar-body">The absence of viable non-opioid pain management for phantom limb syndrome is <strong>not a gap — it is a crisis</strong>. IronLimb Foundation funds and advocates for research into alternatives: neurostimulation, mirror therapy, VR treatment, and nerve-targeted approaches that don't carry opioid risk.</p>
+        </div>
+
+        <div class="pillar-card reveal reveal-delay-3" data-num="04">
+          <span class="pillar-icon-lg">🤝</span>
+          <h3 class="pillar-title">Community & Awareness</h3>
+          <p class="pillar-body">Phantom limb syndrome lives in the dark. IronLimb <strong>pulls it into the light</strong> — building a community of athletes, advocates, veterans, and allies who share stories, raise awareness, and refuse to let this condition remain invisible. Powered by the Enferno platform.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ENFERNO INTEGRATION -->
+  <section id="enferno">
+    <div class="forge-bridge-inner">
+      <div class="reveal">
+        <p class="section-label">Technology Integration</p>
+        <h2 class="section-title">Powered by <span style="color:var(--blue);">Enferno</span></h2>
+        <p style="font-size:0.95rem; color:rgba(255,255,255,0.58); line-height:1.85; margin-bottom:16px;">
+          The <strong style="color:var(--white);">Enferno App</strong> — built by IronFire Technologies — serves as IronLimb Foundation's digital backbone. An AI-powered fitness and community platform where every workout is a contribution, every logged mile drives impact, and every subscriber supports the mission.
+        </p>
+        <p style="font-size:0.88rem; color:rgba(255,255,255,0.45); line-height:1.85; margin-bottom:36px;">
+          Enferno bridges the gap between personal athletic achievement and collective nonprofit impact. Train. Track. Give. All in one place.
+        </p>
+
+        <div class="forge-feature-list">
+          <div class="forge-feature">
+            <span class="ff-num">01</span>
+            <div class="ff-content">
+              <strong>Impact Dashboard</strong>
+              <p>See exactly how your activity translates to dollars raised for phantom limb research and veteran support programs.</p>
+            </div>
+          </div>
+          <div class="forge-feature">
+            <span class="ff-num">02</span>
+            <div class="ff-content">
+              <strong>Adaptive Training Programs</strong>
+              <p>AI-generated workouts designed for all ability levels — including adaptive programs built with amputee athletes in mind.</p>
+            </div>
+          </div>
+          <div class="forge-feature">
+            <span class="ff-num">03</span>
+            <div class="ff-content">
+              <strong>Community Feed</strong>
+              <p>Connect with the IronLimb community — athletes, veterans, advocates, and supporters all sharing the same mission.</p>
+            </div>
+          </div>
+          <div class="forge-feature">
+            <span class="ff-num">04</span>
+            <div class="ff-content">
+              <strong>Mission-Linked Subscriptions</strong>
+              <p>A portion of every Enferno subscription directly flows to IronLimb Foundation's research and support initiatives. Technology with purpose.</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="https://enferno.app" class="btn btn-ghost" style="margin-top:36px; border-color:rgba(5,13,255,0.4); color:rgba(5,13,255,0.9);">Try Enferno Beta →</a>
+      </div>
+
+      <!-- Mock Forge UI preview -->
+      <div class="forge-visual reveal reveal-delay-2">
+        <div class="forge-screen">
+          <div class="forge-screen-title">Enferno · Impact This Month</div>
+          <div class="forge-bar-label"><span>Research Fund</span><span>$247 raised</span></div>
+          <div class="forge-bar"><div class="forge-bar-fill" style="width:68%"></div></div>
+          <div class="forge-bar-label"><span>Veteran Support</span><span>$183 raised</span></div>
+          <div class="forge-bar"><div class="forge-bar-fill" style="width:51%; background: linear-gradient(to right, var(--teal), var(--blue-dark));"></div></div>
+          <div class="forge-bar-label"><span>Community Goal</span><span>82% reached</span></div>
+          <div class="forge-bar"><div class="forge-bar-fill" style="width:82%; background: linear-gradient(to right, var(--red), var(--purple));"></div></div>
+        </div>
+
+        <div class="forge-screen" style="border-color:rgba(131,81,168,0.25);">
+          <div class="forge-screen-title" style="color:var(--purple-mid);">Enferno · Adaptive Program</div>
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <div style="background:rgba(131,81,168,0.1); border:1px solid rgba(131,81,168,0.2); padding:10px 12px;">
+              <div style="font-family:'Barlow Condensed',sans-serif; font-size:0.72rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--white);">Upper Body Strength · Day 3</div>
+              <div style="font-size:0.7rem; color:var(--grey); margin-top:3px;">Adaptive · 35 min · IronLimb Series</div>
+            </div>
+            <div style="background:rgba(5,13,255,0.08); border:1px solid rgba(5,13,255,0.15); padding:10px 12px;">
+              <div style="font-family:'Barlow Condensed',sans-serif; font-size:0.72rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--white);">Core & Balance · Active Recovery</div>
+              <div style="font-size:0.7rem; color:var(--grey); margin-top:3px;">All levels · 20 min · Veteran Series</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding:16px 18px; border:1px solid rgba(131,81,168,0.15); background:rgba(46,15,56,0.3);">
+          <div style="font-family:'Barlow Condensed',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.25em; text-transform:uppercase; color:var(--purple-mid); margin-bottom:8px;">Community · Recent</div>
+          <div style="font-size:0.78rem; color:rgba(255,255,255,0.5); line-height:1.7;">"Logged my 100th workout. Every rep for you, brother." — <span style="color:var(--purple-mid);">J. Reeves</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- GET INVOLVED -->
+  <section id="get-involved">
+    <div class="involvement-inner">
+      <p class="section-label reveal">Join the Mission</p>
+      <h2 class="section-title reveal">How You Can <span class="accent">Help</span></h2>
+
+      <div class="involvement-grid">
+        <div class="involvement-card reveal">
+          <span class="inv-icon">🤝</span>
+          <h3 class="inv-title">Fund the Mission</h3>
+          <p class="inv-body">Direct donations to IronLimb Foundation go straight to phantom limb syndrome research, non-opioid pain treatment initiatives, and veteran support programs. Every dollar is accountable.</p>
+          <a href="mailto:contact@ironbridge-ventures.com?subject=IronLimb Foundation Donation" class="inv-link">Donate or Sponsor →</a>
+        </div>
+
+        <div class="involvement-card reveal reveal-delay-1">
+          <span class="inv-icon">📱</span>
+          <h3 class="inv-title">Train with Enferno</h3>
+          <p class="inv-body">Enferno is live in beta. Train with purpose — every rep, every mile, every dollar goes further on this platform.</p>
+          <a href="https://enferno.app" class="inv-link">Try Enferno Beta →</a>
+        </div>
+
+        <div class="involvement-card reveal reveal-delay-2">
+          <span class="inv-icon">🤲</span>
+          <h3 class="inv-title">Partner With Us</h3>
+          <p class="inv-body">Researchers, veteran organizations, adaptive sports programs, and mission-aligned brands — we want to build with you. Reach out and let's talk.</p>
+          <a href="mailto:contact@ironbridge-ventures.com?subject=IronLimb Partnership" class="inv-link">Start a Conversation →</a>
+        </div>
+      </div>
+
+      <div style="margin-top:60px; text-align:center;" class="reveal">
+        <p style="font-family:'DM Serif Display', serif; font-style:italic; font-size:1.4rem; color:rgba(255,255,255,0.6); max-width:560px; margin:0 auto 28px; line-height:1.7;">
+          "He carried it so we would know how. Now we carry it for him."
+        </p>
+        <a href="mailto:contact@ironbridge-ventures.com" class="btn btn-primary">contact@ironbridge-ventures.com</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="footer-logo">Iron<span>Limb</span> Foundation</div>
+        <div class="footer-sub">A non-profit foundation affiliated with IronBridge Holdings</div>
+      </div>
+      <ul class="footer-nav">
+        <li><a href="index.html">Holdings Home</a></li>
+        <li><a href="#story">Story</a></li>
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="https://enferno.app">Enferno App</a></li>
+      </ul>
+      <div class="footer-copy">© 2026 IronBridge Holdings LLC</div>
+    </div>
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.08 });
+    reveals.forEach(el => obs.observe(el));
+  </script>
+
+</body>
+</html>

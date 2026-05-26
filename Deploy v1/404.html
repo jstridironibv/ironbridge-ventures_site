@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 · Bridge Out · IronBridge Holdings</title>
+  <meta name="description" content="The page you're looking for doesn't exist. Return to IronBridge Holdings." />
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#5F1579" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600&family=Barlow+Condensed:wght@400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --grey:        rgb(120,125,129);
+      --red:         rgb(221,21,0);
+      --black:       rgb(0,0,0);
+      --purple:      rgb(95,21,121);
+      --purple-mid:  rgb(131,81,168);
+      --purple-dark: rgb(46,15,56);
+      --blue:        rgb(5,13,255);
+      --white:       rgb(255,255,255);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Barlow', sans-serif;
+      font-weight: 300;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      overflow: hidden;
+      position: relative;
+    }
+    /* Background glow */
+    body::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 30% 20%, rgba(95,21,121,0.18), transparent 55%),
+        radial-gradient(ellipse at 70% 80%, rgba(221,21,0,0.10), transparent 55%);
+      pointer-events: none;
+    }
+    /* Subtle grid */
+    body::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(131,81,168,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(131,81,168,0.04) 1px, transparent 1px);
+      background-size: 64px 64px;
+      pointer-events: none;
+      mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+      -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+    }
+    .wrap {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 640px;
+    }
+    .eyebrow {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 32px;
+    }
+    .code {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(7rem, 22vw, 14rem);
+      line-height: 0.85;
+      letter-spacing: 0.02em;
+      color: var(--white);
+      margin-bottom: 12px;
+      background: linear-gradient(180deg, var(--white) 0%, var(--purple-mid) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .headline {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      letter-spacing: 0.08em;
+      color: var(--white);
+      margin-bottom: 18px;
+    }
+    .headline .accent { color: var(--red); }
+    .subhead {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.8;
+      margin-bottom: 40px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 14px 32px;
+      display: inline-block;
+      transition: all 0.25s;
+      border: 1px solid transparent;
+    }
+    .btn-primary {
+      background: var(--red);
+      color: var(--white);
+    }
+    .btn-primary:hover {
+      background: var(--purple);
+      transform: translateY(-2px);
+    }
+    .btn-ghost {
+      background: transparent;
+      color: rgba(255,255,255,0.7);
+      border-color: rgba(255,255,255,0.2);
+    }
+    .btn-ghost:hover {
+      border-color: var(--purple-mid);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+    .footer-mark {
+      margin-top: 64px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+    }
+    .footer-mark em {
+      font-style: italic;
+      color: rgba(255,255,255,0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="eyebrow">ERR_404 // Bridge Out</p>
+    <h1 class="code">404</h1>
+    <h2 class="headline">This Path <span class="accent">Doesn't Exist</span></h2>
+    <p class="subhead">The page you're looking for has either moved, never existed, or was deconstructed during the build. Iron rusts. URLs change. Let's get you back on solid ground.</p>
+    <div class="actions">
+      <a href="/" class="btn btn-primary">Return Home</a>
+      <a href="/ironlimb.html" class="btn btn-ghost">IronLimb Athletics</a>
+    </div>
+    <div class="footer-mark"><em>IronWill</em> · <em>IronFaith</em> · <em>IronService</em></div>
+  </div>
+</body>
+</html>
